@@ -16,7 +16,7 @@ Arranco el contenedor con la imagen en el puerto 8080:
 
 docker run -d -p 8080:80 nginx:1.19.3
 
-![alt text](https://github.com/jordill14/docker_exercises/blob/main/hw-03/images/pull_image.PNG)
+![alt text](https://github.com/jordill14/docker_exercises/blob/main/hw-03/images/run_image_Dockerfile.PNG)
 
 Aparece el html custom en el puerto 8080:
 
