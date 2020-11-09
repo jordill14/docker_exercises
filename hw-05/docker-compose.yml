@@ -1,0 +1,30 @@
+version:
+
+services:
+
+  elasticsearch:
+    image:
+    container_name:
+    environment:
+      - discovery.type=single-node
+    networks:
+      - elastic-network
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image:
+    container_name:
+    networks:
+      - elastic-network
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+    ports:
+      - "5601:5601"
+      - "9300:9300"
+
+networks:
+
+  elastic-network:
+    driver: bridge
