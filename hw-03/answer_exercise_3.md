@@ -4,7 +4,7 @@ Hago pull de la imagen:
 
 docker pull nginx:1.19.3
 
-
+![alt text](https://github.com/jordill14/docker_exercises/blob/main/hw-03/images/pull_image.PNG)
 
 Creo el index.html en la carpeta "html" en mi local:
 
