@@ -1,20 +1,20 @@
-version:
+version: "3.6"
 
 services:
-
   elasticsearch:
-    image:
-    container_name:
+    image: elasticsearch:7.9.3
+    container_name: elasticsearch
     environment:
       - discovery.type=single-node
     networks:
       - elastic-network
     ports:
       - "9200:9200"
+      - "9300:9300"
 
   kibana:
-    image:
-    container_name:
+    image: kibana:7.9.3
+    container_name: kibana
     networks:
       - elastic-network
     environment:
@@ -22,7 +22,6 @@ services:
       - ELASTICSEARCH_PORT=9200
     ports:
       - "5601:5601"
-      - "9300:9300"
 
 networks:
 
