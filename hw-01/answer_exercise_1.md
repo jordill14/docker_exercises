@@ -1,9 +1,13 @@
-Diferencia entre CMD y ENV:
+Diferencia entre CMD y ENTRYPOINT:
 
-La instrucción ENV establece unas variables de entorno persistentes dentro de nuestro contenedor, estás serán visibles para las siguientes instrucciones.
+La instrucción ENTRYPOINT establece el ejecutable que utilizará el proceso del contenedor Docker, si no se utiliza en el Dockerfile entonces Docker utiliza el ENTRYPOINT por defecto q es "/bin/sh
+ -c".
 
-ENV <key> <value>
+ENTRYPOINT ["/bin/echo"]
 
-La instrucción CMD no solo puede establecer unas variables por defecto sino que puede ejecutar ejecutables, las variables o ejecutables que se pasan por medio de esta instrucción se ejecutan una vez que el contenedor se ha inicializado.
 
-CMD [“ejecutable”, “parametro1”, “parametro2”, …]
+La instrucción CMD en cambio establece los parámetros a usar del ejecutable definido en ENTRYPOINT, estos parámetros pueden ejecutar ejecutables.
+
+CMD ["Hello"]
+
+En este caso le pasamos un argumento al ejecutable de ENTRYPOINT, si hacemos build del Dockerfile y run del contenedor sacará por consola el texto "Hello".

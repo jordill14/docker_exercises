@@ -1,10 +1,7 @@
-Hago el build en la carpteta que tengo el Dockerfile con las instrucciones y arrancamos un contenedor:
+Hago el build en la carpteta que tengo el Dockerfile, arrancamos un contenedor y vamos mirando el estado del contenedor:
 
-![alt text](https://github.com/jordill14/docker_exercises/blob/main/hw-04/images/Dockerfile_healthcheck.PNG)
+![alt text](https://github.com/jordill14/docker_exercises/blob/main/hw-04/images/healthy.PNG)
 
-Fallan dos pruebas consecutivas con el parámetro a 15s y aparece como estado: "unhealthy"
-
-![alt text](https://github.com/jordill14/docker_exercises/blob/main/hw-04/images/health.PNG)
 
 Parámetros de HEALTHCHECK:
 
